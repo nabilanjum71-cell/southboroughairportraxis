@@ -8,25 +8,25 @@ every one of these URLs 404'd for Google.
 """
 import os
 
-BASE = "https://southboroughairporttaxis.co.uk"
+BASE = "https://www.southboroughairporttaxis.co.uk"
 PHONE_DISPLAY = "07808 065494"
 PHONE_TEL = "07808065494"
 PHONE_INTL = "+447808065494"
 EMAIL = "clinetaxi@gmail.com"
 
 AP = [
-    {"slug":"gatwick","name":"Gatwick Airport","code":"LGW","icon":"✈️","km":38,"time":"40–55 mins","price":72,"desc":"North and South terminals covered. Closest major airport to Southborough. Fixed price, flight tracking, meet & greet — all included."},
-    {"slug":"heathrow","name":"Heathrow Airport","code":"LHR","icon":"✈️","km":50,"time":"55–70 mins","price":95,"desc":"All 5 terminals covered. UK's busiest airport. Meet & greet in every terminal. Your driver tracks your flight automatically."},
-    {"slug":"city","name":"London City Airport","code":"LCY","icon":"✈️","km":48,"time":"55–70 mins","price":90,"desc":"Business travel hub in the Docklands. Quick check-in airport. Executive car service available for corporate travel."},
-    {"slug":"stansted","name":"Stansted Airport","code":"STN","icon":"✈️","km":75,"time":"80–95 mins","price":130,"desc":"Popular with Ryanair, easyJet and Wizz Air. Fixed price, guaranteed — no surprises on the day."},
-    {"slug":"luton","name":"Luton Airport","code":"LTN","icon":"✈️","km":85,"time":"90–110 mins","price":148,"desc":"easyJet and Wizz Air hub. Fixed-price taxi from Southborough with real-time flight tracking."},
+    {"slug":"gatwick","name":"Gatwick Airport","short":"Gatwick","code":"LGW","icon":"✈️","km":38,"time":"40–55 mins","price":72,"desc":"North and South terminals covered. Closest major airport to Southborough. Fixed price, flight tracking, meet & greet — all included."},
+    {"slug":"heathrow","name":"Heathrow Airport","short":"Heathrow","code":"LHR","icon":"✈️","km":50,"time":"55–70 mins","price":95,"desc":"All 5 terminals covered. UK's busiest airport. Meet & greet in every terminal. Your driver tracks your flight automatically."},
+    {"slug":"city","name":"London City Airport","short":"London City","code":"LCY","icon":"✈️","km":48,"time":"55–70 mins","price":90,"desc":"Business travel hub in the Docklands. Quick check-in airport. Executive car service available for corporate travel."},
+    {"slug":"stansted","name":"Stansted Airport","short":"Stansted","code":"STN","icon":"✈️","km":75,"time":"80–95 mins","price":130,"desc":"Popular with Ryanair, easyJet and Wizz Air. Fixed price, guaranteed — no surprises on the day."},
+    {"slug":"luton","name":"Luton Airport","short":"Luton","code":"LTN","icon":"✈️","km":85,"time":"90–110 mins","price":148,"desc":"easyJet and Wizz Air hub. Fixed-price taxi from Southborough with real-time flight tracking."},
 ]
 SP = [
-    {"slug":"folkestone","name":"Folkestone Eurotunnel","icon":"🚄","km":35,"time":"40–50 mins","price":65,"desc":"Eurotunnel Le Shuttle — drive-on train to Calais, France. Closest seaport from Southborough."},
-    {"slug":"dover","name":"Dover Port","icon":"⛴️","km":42,"time":"45–60 mins","price":78,"desc":"P&O and DFDS ferries to France. UK's busiest ferry port. Fixed-price transfer, door to terminal."},
-    {"slug":"tilbury","name":"Tilbury Docks","icon":"⚓","km":55,"time":"60–75 mins","price":100,"desc":"Thames cruise terminal for Fred Olsen and other cruise lines. Door-to-terminal, fixed price."},
-    {"slug":"southampton","name":"Southampton Cruise Terminal","icon":"🚢","km":68,"time":"75–95 mins","price":120,"desc":"Major cruise hub — Royal Caribbean, P&O, MSC, Cunard, Celebrity. Luggage assistance included."},
-    {"slug":"harwich","name":"Harwich International","icon":"⛴️","km":100,"time":"95–120 mins","price":175,"desc":"Stena Line to Hook of Holland. DFDS to Denmark. Fixed price from Southborough."},
+    {"slug":"folkestone","name":"Folkestone Eurotunnel","short":"Folkestone","icon":"🚄","km":35,"time":"40–50 mins","price":65,"desc":"Eurotunnel Le Shuttle — drive-on train to Calais, France. Closest seaport from Southborough."},
+    {"slug":"dover","name":"Dover Port","short":"Dover","icon":"⛴️","km":42,"time":"45–60 mins","price":78,"desc":"P&O and DFDS ferries to France. UK's busiest ferry port. Fixed-price transfer, door to terminal."},
+    {"slug":"tilbury","name":"Tilbury Docks","short":"Tilbury","icon":"⚓","km":55,"time":"60–75 mins","price":100,"desc":"Thames cruise terminal for Fred Olsen and other cruise lines. Door-to-terminal, fixed price."},
+    {"slug":"southampton","name":"Southampton Cruise Terminal","short":"Southampton","icon":"🚢","km":68,"time":"75–95 mins","price":120,"desc":"Major cruise hub — Royal Caribbean, P&O, MSC, Cunard, Celebrity. Luggage assistance included."},
+    {"slug":"harwich","name":"Harwich International","short":"Harwich","icon":"⛴️","km":100,"time":"95–120 mins","price":175,"desc":"Stena Line to Hook of Holland. DFDS to Denmark. Fixed price from Southborough."},
 ]
 TW = [
     {"slug":"southborough","name":"Southborough","km":0,"county":"Kent","lm":"London Road, Modest Corner & St John's Road","st":"High Brooms Station"},
@@ -70,8 +70,8 @@ def page_html(frm, dest, is_ap):
     adjp = round(dest["price"] + frm["km"] * 2)
     dest_label = f'{dest["name"]} ({dest["code"]})' if is_ap else dest["name"]
     url = f'{BASE}/taxi/{frm["slug"]}-to-{dest["slug"]}/'
-    title = f'{frm["name"]} to {dest["name"]} Taxi | Fixed Price £{adjp} | C Line Cars'
-    desc = f'Fixed-price taxi from {frm["name"]} to {dest["name"]} from £{adjp}. Journey takes {dest["time"]}. {"Flight tracking, no delay surcharge, meet & greet." if is_ap else "Door-to-terminal, fixed price, no hidden charges."} Call {PHONE_DISPLAY}.'
+    title = f'{frm["name"]} to {dest["short"]} Taxi | £{adjp} Fixed Price'
+    desc = f'Fixed-price taxi, {frm["name"]} to {dest["short"]}. From £{adjp}, {dest["time"]}. {"Flight tracking, no delay fees." if is_ap else "Door-to-terminal, no hidden fees."} Call {PHONE_DISPLAY}.'
 
     faqs = [
         (f'How much is a taxi from {frm["name"]} to {dest["name"]}?',
@@ -112,10 +112,11 @@ def page_html(frm, dest, is_ap):
     faq_schema = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[%s]}' % faq_schema_items
 
     service_schema = (
-        '{"@context":"https://schema.org","@type":"TaxiService","name":"C Line Cars","description":"Fixed-price taxi from %s to %s","url":"%s","telephone":"%s",'
-        '"areaServed":{"@type":"Place","name":"%s"},"priceRange":"££",'
-        '"makesOffer":{"@type":"Offer","itemOffered":{"@type":"Service","name":"%s to %s Taxi"},"price":"%s","priceCurrency":"GBP"}}'
-    ) % (frm["name"], dest["name"], url, PHONE_INTL, frm["name"], frm["name"], dest["name"], adjp)
+        '{"@context":"https://schema.org","@type":"TaxiService","name":"%s to %s Taxi","description":"Fixed-price taxi from %s to %s","url":"%s",'
+        '"provider":{"@type":"LocalBusiness","name":"C Line Cars","telephone":"%s","priceRange":"££"},'
+        '"areaServed":{"@type":"Place","name":"%s"},'
+        '"offers":{"@type":"Offer","price":"%s","priceCurrency":"GBP"}}'
+    ) % (frm["name"], dest["name"], frm["name"], dest["name"], url, PHONE_INTL, frm["name"], adjp)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -212,7 +213,8 @@ def page_html(frm, dest, is_ap):
 
 
 def main():
-    out_root = os.path.join(os.path.dirname(__file__), "taxi")
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    out_root = os.path.join(repo_root, "taxi")
     count = 0
     for frm in TW:
         for dest in AP:
