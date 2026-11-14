@@ -1,5 +1,17 @@
 {
+  "trailingSlash": true,
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/blog", "destination": "/guides/", "permanent": true },
+    { "source": "/blog/:slug", "destination": "/guides/:slug/", "permanent": true },
+    { "source": "/airports", "destination": "/taxi/", "permanent": true },
+    { "source": "/towns", "destination": "/taxi/", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+    ] }
   ]
 }

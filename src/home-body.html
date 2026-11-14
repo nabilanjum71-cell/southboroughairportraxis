@@ -1,0 +1,293 @@
+<main id="v-home">
+  <div class="urg">✈️ <strong>Pre-book your fixed-price airport transfer.</strong> Southborough, Tunbridge Wells &amp; all of West Kent · No flight-delay surcharge.</div>
+  <div class="ticker"><div class="ti" id="ticker">{{TICKER}}</div></div>
+
+  <section class="hero">
+    <div class="hgrid"></div><div class="hglow"></div>
+    <div class="hc fi">
+      <div class="hbadge"><span class="dot"></span>Available 24/7 · Southborough, Kent TN4</div>
+      <h1>Southborough &amp; Tunbridge Wells<br><em>Airport Taxis</em><br>Fixed Prices.<br><b>Any Airport.</b></h1>
+      <p class="hsub">Door-to-door to Heathrow, Gatwick, Stansted, Luton & London City Airport — plus all seaports and any UK destination. Licensed. DBS-checked. No surprises.</p>
+      <div class="hbtns">
+        <a href="tel:07808065494" class="btn br" onclick="tr('phone',{l:'hero'})">📞 07808 065494</a>
+        <a href="https://wa.me/447808065494?text=Hi Southborough Airport Taxis! I need to book a taxi." target="_blank" class="btn bw" onclick="tr('wa',{l:'hero'})">💬 WhatsApp</a>
+        <a class="btn bg" href="#bsec">📋 Book Online</a>
+      </div>
+      <div class="htrust">
+        <span>✅ <strong>Fixed Prices</strong></span>
+        <span>✈️ <strong>All 5 Airports</strong></span>
+        <span>⛴️ <strong>All Seaports</strong></span>
+        <span>🕐 <strong>24/7</strong></span>
+        <span>👨‍👩‍👧 <strong>Up to 8 Passengers</strong></span>
+        <span>🏛️ <strong>Council Licensed</strong></span>
+        <span>🧾 <strong>DBS Checked</strong></span>
+      </div>
+      <div class="dg">🛡️&nbsp; No surcharge if your flight is delayed — we track it and adjust automatically</div>
+    </div>
+    <!-- INSTANT QUOTE -->
+    <div class="calc fi">
+      <div class="ctitle">⚡ Instant Price Estimate</div>
+      <div class="cg">
+        <div class="cf"><input class="ci" id="qfrom" aria-label="Pickup address or postcode" placeholder="📍 Your pickup address or postcode"></div>
+        <select class="ci" id="qto" aria-label="Destination">
+          <option value="">✈️ Select destination...</option>
+{{QUOTE_OPTIONS}}
+        </select>
+        <select class="ci" id="qveh" aria-label="Vehicle type">
+          <option value="1">🚗 Saloon (1–4 passengers)</option>
+          <option value="1.2">🚙 MPV / Estate (5–6 passengers)</option>
+          <option value="1.4">🚐 Minibus (7–8 passengers)</option>
+          <option value="1.5">🏎️ Executive class</option>
+        </select>
+        <button class="btn br" onclick="calcQ()" style="min-height:42px">Get Estimate →</button>
+        <div class="cres cf" id="qres">
+          <div class="cprice" id="qprice">£--</div>
+          <div class="cnote" id="qnote">Fixed estimate · Call to confirm exact price</div>
+          <div class="cbk">
+            <a href="https://wa.me/447808065494" target="_blank" class="btn bw bs" onclick="tr('wa',{l:'calc'})">💬 Book WhatsApp</a>
+            <a href="tel:07808065494" class="btn br bs" onclick="tr('phone',{l:'calc'})">📞 Call to Confirm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO BOX 1 -->
+  <div style="padding:0 1.2rem;margin-top:2rem" class="fi">
+    <div class="aeo">
+      <div class="aeo-lbl">Quick Answer</div>
+      <h2>How much is a taxi from Southborough to Gatwick Airport?</h2>
+      <p>A fixed-price taxi from <strong>Southborough to Gatwick Airport</strong> costs from <strong>£72 for a saloon car</strong> (1–4 passengers). The journey is approximately {{GATWICK_KM}} and takes <strong>{{GATWICK_TIME}}</strong>. Southborough Airport Taxis includes <strong>real-time flight tracking</strong>, <strong>no delay surcharge</strong>, and <strong>meet &amp; greet in arrivals</strong>. Call <strong>07808 065494</strong> to confirm your exact fare.</p>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats fi">
+    <div class="sbox"><div class="sn">24/7</div><div class="sl">Always Available</div></div>
+    <div class="sbox"><div class="sn">12</div><div class="sl">Towns Covered</div></div>
+    <div class="sbox"><div class="sn">120</div><div class="sl">Fixed-Price Routes</div></div>
+    <div class="sbox"><div class="sn">£72</div><div class="sl">Gatwick From</div></div>
+  </div>
+
+  <!-- WHY BAND — like teacher site "why choose us" -->
+  <div class="wband fi">
+    <div class="stag wh">Why Southborough Chooses Southborough Airport Taxis</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,5vw,3rem);color:#fff;letter-spacing:.02em;line-height:.95;margin:.5rem 0 .3rem">Airport-Only Focus.<br><em style="color:var(--G);font-style:normal">Kent-Tuned.</em> Zero Surprises.</h2>
+    <p style="font-size:.83rem;color:rgba(255,255,255,.42);line-height:1.75;margin-bottom:.3rem;max-width:580px">Most taxi firms list 20 services and have generic pages. We built this service around one keyword: <strong style="color:rgba(255,255,255,.72)">airport taxi Southborough</strong>. Everything we do is tuned for that journey.</p>
+    <div class="wlist">
+      <div class="wi"><span class="wi-ic">💷</span><div><strong style="color:#fff">Fixed prices — guaranteed.</strong> The price we quote is the price you pay. No meters, no surge, no extras.</div></div>
+      <div class="wi"><span class="wi-ic">✈️</span><div><strong style="color:#fff">Real-time flight tracking included.</strong> Delayed? We adjust automatically at zero extra charge.</div></div>
+      <div class="wi"><span class="wi-ic">🛡️</span><div><strong style="color:#fff">90-day return protection.</strong> If anything goes wrong after your journey, we put it right — no fine print.</div></div>
+      <div class="wi"><span class="wi-ic">🤝</span><div><strong style="color:#fff">Meet &amp; greet in arrivals.</strong> Your driver waits with a name board. No waiting charge for 60 minutes after landing.</div></div>
+      <div class="wi"><span class="wi-ic">📍</span><div><strong style="color:#fff">Local Southborough knowledge.</strong> Based on London Road TN4. We know every road, postcode and shortcut.</div></div>
+      <div class="wi"><span class="wi-ic">🏛️</span><div><strong style="color:#fff">Council licensed &amp; DBS checked.</strong> All drivers licensed by Tunbridge Wells Borough Council.</div></div>
+    </div>
+    <div style="margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.6rem">
+      <a href="tel:07808065494" class="btn br" onclick="tr('phone',{l:'why'})">📞 07808 065494</a>
+      <a href="https://wa.me/447808065494" target="_blank" class="btn bw" onclick="tr('wa',{l:'why'})">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- AIRPORTS -->
+  <section class="sec fi">
+    <div class="stag">5 London Airports</div>
+    <h2 class="sh2">Fixed-Price Transfers to <em>Every Airport</em></h2>
+    <p class="sdesc">Door-to-door from Southborough. Meet &amp; greet in arrivals. Flight tracking included. No delay surcharge — ever.</p>
+    <div class="gc g3" id="ap-home">{{AP_CARDS}}</div>
+  </section>
+
+  <!-- AEO BOX 2 -->
+  <div style="padding:0 1.2rem" class="fi">
+    <div class="aeo">
+      <div class="aeo-lbl">Quick Answer</div>
+      <h3>Which airport is closest to Southborough, Kent?</h3>
+      <p><strong>Gatwick Airport (LGW)</strong> is the closest airport to Southborough at approximately <strong>{{GATWICK_DIST}}</strong>. {{CLOSEST_REST}}. Southborough Airport Taxis provides fixed-price taxis to all five from any postcode in Southborough, Tunbridge Wells, Tonbridge and surrounding Kent towns.</p>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="sec sa fi">
+    <div class="stag">Our Process</div>
+    <h2 class="sh2">Our Proven 6-Step <em>Transfer Process</em></h2>
+    <p class="sdesc">From booking to arrivals hall — simple, reliable and stress-free every single time.</p>
+    <div class="steps">
+      <div class="step"><div class="snum">1</div><div><div class="stitle">Book by phone, WhatsApp or online</div><div class="stext">Call 07808 065494, WhatsApp, or use the form below. We confirm within 30 minutes with driver name and details.</div></div></div>
+      <div class="step"><div class="snum">2</div><div><div class="stitle">Give us your flight number</div><div class="stext">We use it to track your flight live for both departures and arrivals — so we always know where you are.</div></div></div>
+      <div class="step"><div class="snum">3</div><div><div class="stitle">We monitor your flight in real time</div><div class="stext">Flight delayed? We adjust your pickup automatically. No extra charge — ever. The price you booked is the price you pay.</div></div></div>
+      <div class="step"><div class="snum">4</div><div><div class="stitle">Driver arrives at your door early</div><div class="stext">Your driver arrives at your Southborough address 5–10 minutes before the agreed pickup time — always.</div></div></div>
+      <div class="step"><div class="snum">5</div><div><div class="stitle">Fixed fare — zero surprises on the day</div><div class="stext">No meters, no surge, no extras added on the day. What you were quoted is what you pay. Guaranteed.</div></div></div>
+      <div class="step"><div class="snum">6</div><div><div class="stitle">Meet &amp; greet in arrivals (inbound flights)</div><div class="stext">Your driver waits in the arrivals hall with a name board. No waiting charge for the first 60 minutes after landing.</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEAPORTS -->
+  <section class="sec sd fi">
+    <div class="stag go">Seaports &amp; Cruise Terminals</div>
+    <h2 class="sh2 li">Cruise &amp; Seaport <em>Transfers</em></h2>
+    <p class="sdesc" style="color:rgba(255,255,255,.38)">Fixed-price door-to-terminal transfers to all major UK seaports and cruise terminals from Southborough and Kent.</p>
+    <div class="gc g3" id="sp-home">{{SP_CARDS}}</div>
+  </section>
+
+  <!-- TOWNS -->
+  <section class="sec sa fi">
+    <div class="stag">Local Coverage</div>
+    <h2 class="sh2">Pickup from <em>Any Nearby Town</em></h2>
+    <p class="sdesc">Door-to-door from Southborough, Tunbridge Wells, Tonbridge, Sevenoaks and every town in Kent and East Sussex. Click your town to see all routes and prices.</p>
+    <div class="gc g2" id="tw-home">{{TW_CARDS}}</div>
+    <div style="text-align:center;margin-top:1.1rem"><a class="btn bo" href="/taxi/">See All Towns &amp; Routes →</a></div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="sec fi">
+    <div class="stag">Transparent Pricing</div>
+    <h2 class="sh2">Fixed Fares from <em>Southborough</em></h2>
+    <p class="sdesc">No hidden charges. No surge pricing. Prices shown for a saloon car (1–4 passengers). Click any route to see all vehicle options and book.</p>
+    <div class="ptbl" id="pt-home">{{PRICE_ROWS}}</div>
+    <p style="font-size:.7rem;color:var(--fg3);margin-top:.65rem;line-height:1.6">* Saloon from Southborough TN4. Estimated at £2/km. Call 07808 065494 for your exact postcode quote. Dartford Crossing toll added where applicable.</p>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="sec sa fi">
+    <div class="stag">How We Compare</div>
+    <h2 class="sh2">Southborough Airport Taxis vs <em>Every Other Option</em></h2>
+    <p class="sdesc">There are other taxi options in Southborough. Here is the honest comparison — we won't pretend they don't exist.</p>
+    <div style="overflow-x:auto">
+      <table class="ctbl">
+        <thead><tr>
+          <th>Feature</th><th class="hl">Southborough Airport Taxis</th><th>Other Local Firms</th><th>Uber / National Apps</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Fixed price shown upfront</td><td style="text-align:center;color:var(--Gr);font-weight:700">✅</td><td style="text-align:center;color:var(--fg3)">⚠️ Often "call for quote"</td><td style="text-align:center;color:var(--fg3)">⚠️ Surge pricing</td></tr>
+          <tr><td>No charge for flight delays</td><td style="text-align:center;color:var(--Gr);font-weight:700">✅</td><td style="text-align:center;color:var(--fg3)">❌ Rarely guaranteed</td><td style="text-align:center;color:var(--fg3)">❌ Must rebook</td></tr>
+          <tr><td>Meet &amp; greet in arrivals</td><td style="text-align:center;color:var(--Gr);font-weight:700">✅</td><td style="text-align:center;color:var(--fg3)">⚠️ Sometimes</td><td style="text-align:center;color:var(--fg3)">❌ No</td></tr>
+          <tr><td>Local Southborough knowledge</td><td style="text-align:center;color:var(--Gr);font-weight:700">✅</td><td style="text-align:center;color:var(--fg3)">⚠️ Varies</td><td style="text-align:center;color:var(--fg3)">❌ Random driver</td></tr>
+          <tr><td>24/7 including 4am pickups</td><td style="text-align:center;color:var(--Gr);font-weight:700">✅</td><td style="text-align:center;color:var(--fg3)">⚠️ Limited hours</td><td style="text-align:center;color:var(--fg3)">✅ Usually</td></tr>
+          <tr><td>Council licensed &amp; DBS checked</td><td style="text-align:center;color:var(--Gr);font-weight:700">✅</td><td style="text-align:center;color:var(--fg3)">⚠️ Check before booking</td><td style="text-align:center;color:var(--fg3)">⚠️ Varies by driver</td></tr>
+          <tr><td>90-day return protection</td><td style="text-align:center;color:var(--Gr);font-weight:700">✅</td><td style="text-align:center;color:var(--fg3)">❌</td><td style="text-align:center;color:var(--fg3)">❌</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:.75rem;padding:.88rem 1rem;background:rgba(192,57,43,.07);border-left:4px solid var(--R);border-radius:4px;font-size:.8rem;line-height:1.72;color:var(--fg2)"><strong>The bottom line:</strong> Other firms treat airport taxis as one of many services. Southborough Airport Taxis treats airport transfers as the only service that matters — and it shows in every journey.</div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sec fi">
+    <div class="stag">Customer Reviews</div>
+    <h2 class="sh2">What Our Passengers <em>Say</em></h2>
+    <p class="sdesc">Feedback from passengers across Southborough, Tunbridge Wells, Tonbridge, Sevenoaks and the rest of West Kent.</p>
+    <div class="tw"><div class="tt" id="tt">{{TESTIMONIALS}}</div></div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="sec sa fi">
+    <div class="stag">Airport Travel Guides</div>
+    <h2 class="sh2">Tips &amp; Guides for <em>Kent Travellers</em></h2>
+    <p class="sdesc">Expert airport travel advice from the Southborough Airport Taxis team — Southborough's local airport taxi specialists.</p>
+    <div class="bgrid" id="bp">{{GUIDE_CARDS}}</div>
+    <div style="text-align:center;margin-top:1.1rem"><a class="btn bo" href="/guides/">All Travel Guides →</a></div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="ctaband fi">
+    <h2>Ready to Book? Call or WhatsApp Now</h2>
+    <p>We confirm within 30 minutes — any airport, any time, any day of the year.</p>
+    <div class="ctabtns">
+      <a href="tel:07808065494" class="btn" style="background:#fff;color:var(--R);font-weight:800" onclick="tr('phone',{l:'cta'})">📞 07808 065494</a>
+      <a href="https://wa.me/447808065494" target="_blank" class="btn bw" onclick="tr('wa',{l:'cta'})">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- BOOKING FORM -->
+  <section class="sec fi" id="bsec">
+    <div style="display:grid;gap:2.5rem">
+      <div>
+        <div class="stag">Book Your Transfer</div>
+        <h2 class="sh2">Get a Fixed Price &amp;<br><em>Book Online</em></h2>
+        <p class="sdesc">Fill in the form and it opens WhatsApp with your booking details ready to send — we confirm within 30 minutes with your driver's name and details.</p>
+        <div>
+          <div class="ci2"><div class="ci2-i">📞</div><div><div class="ci2-l">Call / WhatsApp</div><div class="ci2-v"><a href="tel:07808065494">07808 065494</a></div></div></div>
+          <div class="ci2"><div class="ci2-i">💬</div><div><div class="ci2-l">WhatsApp Direct</div><div class="ci2-v"><a href="https://wa.me/447808065494" target="_blank">+44 7808 065494</a></div></div></div>
+          <div class="ci2"><div class="ci2-i">📧</div><div><div class="ci2-l">Email</div><div class="ci2-v"><a href="mailto:clinetaxi@gmail.com">clinetaxi@gmail.com</a></div></div></div>
+          <div class="ci2"><div class="ci2-i">📍</div><div><div class="ci2-l">Based In</div><div class="ci2-v">Southborough, Tunbridge Wells, Kent TN4</div></div></div>
+          <div class="ci2"><div class="ci2-i">🕐</div><div><div class="ci2-l">Hours</div><div class="ci2-v">24 hours · 7 days a week · 365 days a year</div></div></div>
+        </div>
+        <div style="margin-top:.95rem;border-radius:8px;overflow:hidden;border:1.5px solid var(--cb)">
+          <iframe src="https://www.google.com/maps?q=Southborough,Tunbridge+Wells,Kent+TN4&output=embed" width="100%" height="190" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Southborough Airport Taxis base Southborough Kent"></iframe>
+        </div>
+        <div style="margin-top:.95rem;padding:.88rem 1rem;background:var(--bg2);border-left:4px solid var(--Gr);border-radius:4px;font-size:.78rem;line-height:1.7;color:var(--fg2)">
+          <strong>After you submit:</strong><br>
+          ① WhatsApp opens with your booking details — just press send<br>
+          ② We confirm your fixed price within 30 minutes<br>
+          ③ Driver name &amp; vehicle sent before your journey
+        </div>
+      </div>
+      <div>
+        <form class="bform" id="mform" name="booking" onsubmit="fsub(event)">
+          <div class="frow">
+            <div class="fg"><label>Full Name *</label><input type="text" name="name" id="fn" placeholder="Your full name" required></div>
+            <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" id="fp" placeholder="07xxx xxxxxx" required></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Email *</label><input type="email" name="email" id="fe" placeholder="your@email.com" required></div>
+            <div class="fg"><label>Passengers *</label>
+              <select name="passengers" required>
+                <option value="">Select...</option>
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+                <option>5–6 (MPV needed)</option><option>7–8 (Minibus needed)</option>
+              </select>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Pickup Address / Postcode *</label><input type="text" name="pickup" id="ff" placeholder="e.g. 12 High St, Southborough TN4" required></div>
+            <div class="fg"><label>Destination *</label><input type="text" name="destination" id="ft" placeholder="e.g. Heathrow Airport Terminal 5" required></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Date *</label><input type="date" name="date" required></div>
+            <div class="fg"><label>Time *</label><input type="time" name="time" required></div>
+          </div>
+          <div class="fg"><label>Vehicle Type</label>
+            <select name="vehicle">
+              <option>Saloon / Standard (1–4 pax)</option>
+              <option>Estate / MPV (5–6 pax)</option>
+              <option>Minibus (7–8 pax)</option>
+              <option>Executive / Business Class</option>
+            </select>
+          </div>
+          <div class="fg"><label>Return Journey?</label>
+            <select name="return">
+              <option>No — one way only</option>
+              <option>Yes — same day return</option>
+              <option>Yes — different date return</option>
+            </select>
+          </div>
+          <div class="fg"><label>Flight Number / Notes</label>
+            <textarea name="notes" placeholder="e.g. BA123 at 06:30. Child seat required. Return 20 Aug."></textarea>
+          </div>
+          <div class="fbtns">
+            <button type="submit" class="btn br">📋 Submit Booking →</button>
+            <a href="https://wa.me/447808065494" target="_blank" class="btn bw" onclick="tr('wa',{l:'form'})">💬 WhatsApp</a>
+          </div>
+          <div class="fnote">30-min response guaranteed. By submitting you agree to our <a href="/privacy/" style="color:var(--R)">Privacy Policy</a>.</div>
+        </form>
+        <div id="fsuccess">
+          <div style="font-size:2.2rem;margin-bottom:.55rem">✅</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.45rem;letter-spacing:.04em;margin-bottom:.32rem">Booking Received!</h3>
+          <p style="font-size:.82rem;color:var(--fg3);line-height:1.7;margin-bottom:.9rem">We'll confirm via WhatsApp &amp; email within 30 minutes.</p>
+          <div style="display:flex;gap:.55rem;justify-content:center;flex-wrap:wrap">
+            <a href="tel:07808065494" class="btn br bs">📞 Call Now</a>
+            <a href="https://wa.me/447808065494" target="_blank" class="btn bw bs">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec sa fi">
+    <div class="stag">FAQ</div>
+    <h2 class="sh2">Frequently Asked Questions About<br><em>Airport Taxis from Southborough</em></h2>
+    <div id="hfaq" style="margin-top:1rem;max-width:820px">{{FAQ}}</div>
+  </section>
+  </main>
+{{FOOTER}}
+
